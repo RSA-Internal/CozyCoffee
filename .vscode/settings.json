@@ -1,0 +1,14 @@
+{
+	"[lua]": {
+		"editor.defaultFormatter": "JohnnyMorganz.stylua",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true
+	},
+	"cSpell.words": [
+		"rbxl",
+		"Roblox",
+		"rojo",
+		"stylua",
+		"typeof"
+	],
+}
