@@ -1,5 +1,5 @@
 # RDA Game
-![lint](https://github.com/RSA-Bots/RDA-Game/actions/workflows/lint/badge.svg)
+![lint](https://github.com/RSA-Bots/RDA-Game/workflows/lint/badge.svg)
 - Live Place: [link](#)
 - Development Place: [link](#)
 
