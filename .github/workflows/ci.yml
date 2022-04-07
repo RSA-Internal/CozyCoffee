@@ -16,4 +16,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: selene src/
       - run: stylua --check src/
+      - run: wally install
       - run: rojo build --output place.rbxl
