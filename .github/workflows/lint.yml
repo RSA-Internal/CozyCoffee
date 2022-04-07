@@ -1,12 +1,11 @@
-name: ci
+name: lint
 
 on:
-  pull_request:
   push:
-    branches: [ main ]
+  pull_request: [main, develop]
 
 jobs:
-  ci:
+  lint:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip-ci]')"
     steps:
@@ -16,5 +15,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: selene src/
       - run: stylua --check src/
-      - run: wally install
-      - run: rojo build --output place.rbxl
