@@ -1,7 +1,7 @@
 # RDA Game
 ![lint](https://github.com/RSA-Bots/RDA-Game/workflows/lint/badge.svg)
 - Live Place: [link](#)
-- Development Place: [link](#)
+- Development Place: [link](https://www.roblox.com/games/9304618061/RDA-Game-Dev)
 
 ## Getting Started
 1. Install Git
