@@ -1,0 +1,20 @@
+name: lint
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip-lint]')"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Roblox/setup-foreman@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - run: selene src/
+      - run: stylua --check src/

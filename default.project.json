@@ -1,0 +1,34 @@
+{
+	"name": "RDA Game 1",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"Shared": {
+				"$path": "src/Shared",
+				"$className": "Folder"
+			},
+			"Packages": {
+				"$path": "Packages",
+				"$className": "Folder"
+			},
+			"$className": "ReplicatedStorage"
+		},
+		"ServerScriptService": {
+			"Server": {
+				"$path": "src/Server",
+				"$className": "Folder"
+			},
+			"$className": "ServerScriptService"
+		},
+		"StarterPlayer": {
+			"StarterPlayerScripts": {
+				"Client": {
+					"$path": "src/Client",
+					"$className": "Folder"
+				},
+				"$className": "StarterPlayerScripts"
+			},
+			"$className": "StarterPlayer"
+		}
+	}
+}
