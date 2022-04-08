@@ -7,12 +7,17 @@
 1. Install Git
 	- Run `winget install Git.Git` if **winget** is available.
 	- Go to [https://git-scm.com/download](https://git-scm.com/download) otherwise.
-2. Install Tooling
+2. Next Clone the Repo
+	- Open a terminal and navigate to a directory where you want to store this repository.
+    - Run `git clone https://github.com/RSA-Bots/RDA-Game`
+    - This will then clone the repo to your filesystem.
+    - Once the cloning is finished, in your terminal navigate into `./RDA-Game`.
+3. Install Tooling
 	- Run `./bin/foreman install`
 	- Add `%USERPROFILE%\.foreman\bin` to your **PATH**.
-3. Install Packages
+4. Install Packages
 	- Run `wally install`
-4. Install Rojo Roblox Studio Plugin
+5. Install Rojo Roblox Studio Plugin
 	- Run `rojo plugin install`
 	- Alternatively, the [VSCode rojo extension](https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo) can be used to automatically manage installing the plugin.
 
