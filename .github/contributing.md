@@ -1,5 +1,5 @@
-### Creating a Fork
-## Coming Soon
+## Creating a Fork
+### Coming Soon
 
 ### Making Changes
 ## Coming Soon
