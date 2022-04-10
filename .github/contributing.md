@@ -4,5 +4,5 @@
 ## Making Changes
 ### Coming Soon
 
-### Submitting a Pull Request (PR)
-## Coming Soon
+## Submitting a Pull Request (PR)
+### Coming Soon
