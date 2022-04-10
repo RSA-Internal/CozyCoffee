@@ -1,0 +1,85 @@
+# This workflow uses actions that are not certified by Github.
+# They are provided by a third-party and are governed by
+# separate termms of service, private policy, and support
+# documentation.
+
+# Column IDs
+# TODO: 18414019
+# In progress: 18414020
+# Reviewing: 18414021
+# Completed: 18414022
+# Released: 18414023
+# Scrapped: 18414044
+
+name: Update Labels
+on:
+  project_card:
+    types:
+      - moved
+
+jobs:
+  in_progress_labels:
+    if: github.event.project_card.column_id == '18414020'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Update In Progress Labels
+        uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
+        with:
+          add-labels: 'In Progress'
+          remove-labels: 'TODO, Review, Completed, Released, Scrapped'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+  review_labels:
+    if: github.event.project_card.column_id == '18414021'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Update Review Labels
+        uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
+        with:
+          add-labels: 'Review'
+          remove-labels: 'TODO, In Progress, Completed, Released, Scrapped'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+  completed_labels:
+    if: github.event.project_card.column_id == '18414022'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Update Completed Labels
+        uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
+        with:
+          add-labels: 'Completed'
+          remove-labels: 'TODO, In Progress, Review, Released, Scrapped'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+  released_labels:
+    if: github.event.project_card.column_id == '18414023'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Update Released Labels
+        uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
+        with:
+          add-labels: 'Released'
+          remove-labels: 'TODO, In Progress, Review, Completed, Scrapped'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+  scrapped_labels:
+    if: github.event.project_card.column_id == '18414044'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Update Scrapped Labels
+        uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
+        with:
+          add-labels: 'Scrapped'
+          remove-labels: 'TODO, In Progress, Review, Completed, Released'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
