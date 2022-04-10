@@ -1,4 +1,4 @@
-```
+```lua
 local Fusion = require(ReplicatedStorage.Fusion)
 
 local New = Fusion.New
