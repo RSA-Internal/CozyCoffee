@@ -10,4 +10,4 @@ Component = "sleitnick/component@^2"
 Trove = "sleitnick/trove@^0"
 
 [server-dependencies]
-ProfileService = "rudy-dev/profileservice@1.0.0"
+ProfileService = "rudy-dev/profileservice@^1"
