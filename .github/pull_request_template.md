@@ -1,4 +1,4 @@
-[contributing]: https://github.com/RSA-Bots/RDA-Game/.github/contributing.md
+[contributing]: https://github.com/RSA-Bots/RDA-Game/blob/develop/.github/contributing.md
 
 ## Pull Request Etiquette
 
