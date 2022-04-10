@@ -146,7 +146,7 @@
 	"Fusion Init": {
         "prefix": "finit",
         "body": [
-            "local Fusion = require(Packages.Fusion)",
+            "local Fusion = require(ReplicatedStorage.Packages.Fusion)",
             "", 
             "local New = Fusion.New",
             "local State = Fusion.State",
