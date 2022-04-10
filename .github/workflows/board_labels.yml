@@ -26,7 +26,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Update In Progress Labels
-        uses: andymckay/labeler
+        uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
         with:
           add-labels: 'In Progress'
           remove-labels: 'TODO, Review, Completed, Released, Scrapped'
@@ -39,7 +39,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Update Review Labels
-        uses: andymckay/labeler
+        uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
         with:
           add-labels: 'Review'
           remove-labels: 'TODO, In Progress, Completed, Released, Scrapped'
@@ -52,7 +52,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Update Completed Labels
-        uses: andymckay/labeler
+        uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
         with:
           add-labels: 'Completed'
           remove-labels: 'TODO, In Progress, Review, Released, Scrapped'
@@ -65,7 +65,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Update Released Labels
-        uses: andymckay/labeler
+        uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
         with:
           add-labels: 'Released'
           remove-labels: 'TODO, In Progress, Review, Completed, Scrapped'
@@ -78,7 +78,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Update Scrapped Labels
-        uses: andymckay/labeler
+        uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
         with:
           add-labels: 'Scrapped'
           remove-labels: 'TODO, In Progress, Review, Completed, Released'
