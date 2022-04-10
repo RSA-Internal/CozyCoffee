@@ -7,7 +7,7 @@
 1. Install Git
 	- Run `winget install Git.Git` if **winget** is available.
 	- Go to [https://git-scm.com/download](https://git-scm.com/download) otherwise.
-2. Next Clone the Repo
+2. Clone Repository
 	- Open a terminal and navigate to a directory where you want to store this repository.
     - Run `git clone https://github.com/RSA-Bots/RDA-Game`
     - This will then clone the repo to your filesystem.
