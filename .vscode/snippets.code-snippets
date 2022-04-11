@@ -93,7 +93,6 @@
 	"Knit Controller": {
 		"prefix": ["kcontroller", "kcont"],
 		"body": [
-			"",
 			"local ${0:$TM_FILENAME_BASE} = Knit.CreateController({ Name = \"${0:$TM_FILENAME_BASE}\" })",
 			"",
 			"function ${0:$TM_FILENAME_BASE}:KnitStart() end",
