@@ -10,6 +10,7 @@ Component = "sleitnick/component@^2"
 Trove = "sleitnick/trove@^0"
 Fusion = "elttob/fusion@0.1.1-beta"
 t = "osyrisrblx/t@3.0.0"
+TableUtil = "sleitnick/table-util@1.1.5"
 
 [server-dependencies]
 ProfileService = "rudy-dev/profileservice@^1"
