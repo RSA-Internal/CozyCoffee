@@ -9,6 +9,7 @@ Knit = "sleitnick/knit@^1"
 Component = "sleitnick/component@^2"
 Trove = "sleitnick/trove@^0"
 Fusion = "elttob/fusion@0.1.1-beta"
+t = "osyrisrblx/t@3.0.0"
 
 [server-dependencies]
 ProfileService = "rudy-dev/profileservice@^1"
