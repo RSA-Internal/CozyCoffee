@@ -13,7 +13,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip-lint]')"
     steps:
       - uses: actions/checkout@v2
-      - uses: Roblox/setup-foreman@v1
+      - uses: actions/setup-aftman@v0.3.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: selene src/
