@@ -6,11 +6,12 @@ realm = "shared"
 
 [dependencies]
 Component = "sleitnick/component@^2"
-Trove = "sleitnick/trove@^0.5"
 Fusion = "elttob/fusion@^0.1.1-beta"
 Net = "vorlias/net@^3.0.1"
+Promise = "evaera/promise@^4.0.0"
 T = "osyrisrblx/t@^3.0.0"
 TableUtil = "sleitnick/table-util@^1.1.5"
+Trove = "sleitnick/trove@^0.5"
 
 [server-dependencies]
 ProfileService = "rudy-dev/profileservice@^1"
