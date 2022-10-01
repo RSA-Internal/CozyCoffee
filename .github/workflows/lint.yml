@@ -12,9 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip-lint]')"
     steps:
-      - uses: actions/checkout@v2
-      - uses: Roblox/setup-foreman@v1
+      - name: Checkout v2
+        uses: actions/checkout@v2
+      - name: Setup Aftman v0.2.7
+        uses: ok-nick/setup-aftman@v0.3.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - run: selene src/
-      - run: stylua --check src/
+          version: v0.2.7
+      - name: Setup Selene
+        run: selene src/
+      - name: Lint
+        run: stylua --check src/
