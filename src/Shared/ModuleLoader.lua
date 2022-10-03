@@ -1,41 +1,54 @@
 --!strict
-local ModuleLoader = { Debug = game:GetService("RunService"):IsStudio() }
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-function ModuleLoader.LoadModule(module: ModuleScript): (boolean, any)
-	local path = module:GetFullName()
-	local success, result = pcall(require, module)
+local Promise = require(ReplicatedStorage.Packages.Promise)
 
-	if not success then
-		warn(
-			debug.traceback(
-				("[ModuleLoader] Module %q skipped, could not be loaded for reason: %s"):format(path, result)
-			)
-		)
-		return false, result
-	end
+local ModuleLoader = {}
 
-	local resultType = typeof(result)
-	if resultType ~= "table" and resultType ~= "function" then
-		warn(
-			debug.traceback(
-				("[ModuleLoader] Module %q loaded, but it did not return a table or function"):format(path, resultType)
-			)
+function ModuleLoader.InitModules(modules)
+	local initPromises = {}
+
+	for _, module in modules do
+		table.insert(
+			initPromises,
+			Promise.new(function(resolve)
+				if module.Init then
+					module:Init()
+				end
+				resolve(module)
+			end)
 		)
 	end
 
-	if ModuleLoader.Debug then
-		print(("[ModuleLoader] Module %q loaded (return type: %s)"):format(path, typeof(resultType)))
+	return Promise.all(initPromises)
+end
+
+function ModuleLoader.StartModules(modules)
+	for _, module in modules do
+		if module.Start and typeof(modules.Start) then
+			task.spawn(module.Start, module)
+		end
 	end
 
-	return true, result
+	return Promise.resolve()
 end
 
 function ModuleLoader.LoadModules(root: Instance)
-	for _, child in ipairs(root:GetChildren()) do
-		if child:IsA("Folder") then
-			ModuleLoader.LoadModules(child)
-		elseif child:IsA("ModuleScript") then
-			ModuleLoader.LoadModule(child)
+	local modules = {}
+
+	for _, child: Instance in root:GetChildren() do
+		if child:IsA("ModuleScript") then
+			table.insert(modules, require(child))
+		end
+	end
+
+	return ModuleLoader.InitModules(modules):andThen(ModuleLoader.StartModules)
+end
+
+function ModuleLoader.LoadComponents(root: Instance)
+	for _, child in root:GetChildren() do
+		if child:IsA("ModuleScript") then
+			require(child)
 		end
 	end
 end
