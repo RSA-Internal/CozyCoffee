@@ -2,3 +2,4 @@
 /ServerPackages/
 /*.lock
 /roblox.toml
+sourcemap.json

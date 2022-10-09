@@ -13,8 +13,8 @@
     - This will then clone the repo to your filesystem.
     - Once the cloning is finished, in your terminal navigate into `./RDA-Game`.
 3. Install Tooling
-	- Run `./bin/foreman install`
-	- Add `%USERPROFILE%\.foreman\bin` to your **PATH**.
+	- Run `./bin/aftman self-install`
+	- Run `aftman install`
 4. Install Packages
 	- Run `wally install`
 5. Install Rojo Roblox Studio Plugin

@@ -4,7 +4,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Knit = require(ReplicatedStorage.Packages.Knit)
 
 -- Knit Controller Documentation: https://sleitnick.github.io/Knit/docs/controllers
-local PlayerSparkleController = Knit.CreateController({ Name = "PlayerSparkleController" })
+local PlayerSparkleController = { Name = "PlayerSparkleController" }
 
 function PlayerSparkleController:KnitInit()
 	self.PlayerSparkleService = Knit.GetService("PlayerSparkleService")
@@ -30,4 +30,5 @@ function PlayerSparkleController:SetSparkling(shouldSparkle: boolean)
 	self.PlayerSparkleService.SetSparkling:Fire(shouldSparkle)
 end
 
+Knit.CreateController(PlayerSparkleController)
 return PlayerSparkleController
