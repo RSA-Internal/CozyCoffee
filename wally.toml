@@ -1,16 +1,17 @@
 [package]
-name = "rda-game/game1"
+name = "rda-game/cozy-coffee"
 version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
 Component = "sleitnick/component@^2"
-Trove = "sleitnick/trove@^0.5"
-Fusion = "elttob/fusion@^0.1.1-beta"
-Net = "vorlias/net@^3.0.1"
-T = "osyrisrblx/t@^3.0.0"
-TableUtil = "sleitnick/table-util@^1.1.5"
+Fusion = "elttob/fusion@0.1.1-beta"
+Knit = "sleitnick/knit@^1"
+Signal = "sleitnick/signal@^1"
+T = "osyrisrblx/t@^3"
+TableUtil = "sleitnick/table-util@^1"
+Trove = "sleitnick/trove@^0"
 
 [server-dependencies]
 ProfileService = "rudy-dev/profileservice@^1"
